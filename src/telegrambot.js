@@ -107,10 +107,10 @@ module.exports = class TelegramBot {
             let messageText = msg.text;
 
             console.log(chatId, messageText);
-            if TelegramBot.isDefined(chatId) {    
+            if (TelegramBot.isDefined(chatId)) {    
                 console.log('can we trust chat ', chatId, isAllowedChat(chatId));
             }
-            if TelegramBot.isDefined(userId) {    
+            if (TelegramBot.isDefined(userId)) {    
                 console.log('can we trust user ', userId, isAllowedUser(userId));
             }
 
