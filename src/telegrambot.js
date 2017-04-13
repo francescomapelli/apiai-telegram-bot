@@ -210,14 +210,14 @@ module.exports = class TelegramBot {
 
     isAllowedUser(userId) {
         console.log('checking if we can trust user ', userId);
-        var allowed = [3168974];
+        var allowed = [3168973];
 
         return allowed.indexOf(userId) >= 0 ;
     }
 
     isAllowedChat(chatId) {
         console.log('checking if we can trust chat ', chatId);
-        var allowed = [3168974];
+        var allowed = [-202689052];
         return allowed.indexOf(chatId) >= 0 ;
     }
 
