@@ -92,6 +92,7 @@ module.exports = class TelegramBot {
 
             if (msg.chat) {
                 chatId = msg.chat.id;
+                console.log('found chatId ', chatId);
             }
             if (msg.from) {
                 userId = msg.from.id;
