@@ -93,10 +93,14 @@ module.exports = class TelegramBot {
             if (msg.chat) {
                 chatId = msg.chat.id;
                 console.log('found chatId ', chatId);
+            } else {
+                console.log('chatId not found');
             }
             if (msg.from) {
                 userId = msg.from.id;
                 console.log('found userid ', userId);
+            }else {
+                console.log('userId not found');
             }
 
            
