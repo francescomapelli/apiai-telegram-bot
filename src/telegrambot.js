@@ -95,6 +95,7 @@ module.exports = class TelegramBot {
             }
             if (msg.from) {
                 userId = msg.from.id;
+                console.log('found userid ', userId);
             }
 
            
@@ -109,9 +110,13 @@ module.exports = class TelegramBot {
             console.log(chatId, messageText);
             if (TelegramBot.isDefined(chatId)) {    
                 console.log('can we trust chat ', chatId, isAllowedChat(chatId));
+            } else {
+                console.log('undefined chatId');
             }
             if (TelegramBot.isDefined(userId)) {    
                 console.log('can we trust user ', userId, isAllowedUser(userId));
+            }else {
+                console.log('undefined userId');
             }
 
             if (chatId && messageText) {
