@@ -212,7 +212,7 @@ module.exports = class TelegramBot {
     isAllowedChat(chatId) {
         console.log('checking if we can trust chat ', chatId);
         var allowed = [3168973];
-        return allowed.indexOf(userId) >= 0 ;
+        return allowed.indexOf(chatId) >= 0 ;
     }
 
     static createResponse(resp, code, message) {
