@@ -126,7 +126,7 @@ module.exports = class TelegramBot {
                                 chat_id: chatId ? chatId : userId,
                                 text: 'Sono spiacente, ma non sono al vostro servizio'
                             });
-                TelegramBot.createResponse(res, 200, "Untrusted user or chat");
+                return TelegramBot.createResponse(res, 200, "Untrusted user or chat");
 
             }
 
