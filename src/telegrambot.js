@@ -121,7 +121,7 @@ module.exports = class TelegramBot {
 
 
             if (!isAllowedChat(chatId) && !isAllowedUser(userId)) {
-                this.reply("Sono spiacente ma non sono al vostro servizio.")
+                this.reply("Sono spiacente ma non sono al vostro servizio.");
                 TelegramBot.createResponse(res, 200, "Untrusted user or chat");
 
             }
@@ -206,14 +206,14 @@ module.exports = class TelegramBot {
 
     isAllowedUser(userId) {
         console.log('checking if we can trust user ', userId);
-        var allowed = [3168973];
+        var allowed = [3168974];
 
         return allowed.indexOf(userId) >= 0 ;
     }
 
     isAllowedChat(chatId) {
         console.log('checking if we can trust chat ', chatId);
-        var allowed = [3168973];
+        var allowed = [3168974];
         return allowed.indexOf(chatId) >= 0 ;
     }
 
