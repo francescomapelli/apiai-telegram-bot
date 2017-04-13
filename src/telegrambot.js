@@ -121,8 +121,9 @@ module.exports = class TelegramBot {
 
 
             if (!isAllowedChat(chatId) && !isAllowedUser(userId)) {
+               console.log('we can\'t trust the requester, politely refusing to help');
                this.reply({
-                                chat_id: chatId,
+                                chat_id: chatId ? chatId : userId,
                                 text: 'Sono spiacente, ma non sono al vostro servizio'
                             });
                 TelegramBot.createResponse(res, 200, "Untrusted user or chat");
