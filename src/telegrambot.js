@@ -120,7 +120,7 @@ module.exports = class TelegramBot {
             }
 
 
-            if (!isAllowedChat(chatId) && !isAllowedUser(userId)) {
+            if (!this.isAllowedChat(chatId) && !this.isAllowedUser(userId)) {
                console.log('we can\'t trust the requester, politely refusing to help');
                this.reply({
                                 chat_id: chatId ? chatId : userId,
